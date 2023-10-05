@@ -1,12 +1,13 @@
 package arraysandhashing;
 
+/**
+ *
+ */
 public class ProductOfArrayExceptSelf238 {
 
     public static void main(String[] args) {
-
         Solution solution = new Solution();
         solution.productExceptSelf(new int[] {1,2,3,4});
-        //Output: [24,12,8,6]
     }
 
     public static class Solution {

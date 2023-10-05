@@ -7,12 +7,12 @@ import java.util.List;
 public class GroupAnagrans49Tests {
 
     @Test
-     public void assertGroup() {
-         GroupAnagrans49.Solution sol = new GroupAnagrans49.Solution();
-         List<List<String>> result =
-         sol.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
+    public void assertGroup() {
+        GroupAnagrans49.Solution sol = new GroupAnagrans49.Solution();
+        List<List<String>> result =
+                sol.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
 
-         Assert.assertEquals(3, result.size());
-     }
+        Assert.assertEquals(3, result.size());
+    }
 
 }
