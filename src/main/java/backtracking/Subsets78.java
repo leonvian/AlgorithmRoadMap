@@ -1,12 +1,15 @@
 package backtracking;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Subsets78 {
 
+
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+
     public List<List<Integer>> subsets(int[] nums) {
+        
+
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         addSubset(nums, 0, result, new LinkedList<Integer>());
 
