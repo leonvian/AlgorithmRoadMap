@@ -18,7 +18,7 @@ public class BinaryTreeFactory {
         }
 
         TreeNode root = createNode(queueValues);
-        if (array.length <= 3) {
+        if (array.length <= 1) {
             return root;
         }
 
@@ -44,17 +44,7 @@ public class BinaryTreeFactory {
     private static TreeNode createNode(LinkedList<Integer> queue) {
         if (queue.isEmpty()) return null;
 
-        TreeNode treeNode = new TreeNode(queue.poll());
-
-        /*
-        if (!queue.isEmpty())
-            treeNode.left = new TreeNode(queue.poll());
-
-        if (!queue.isEmpty())
-            treeNode.right = new TreeNode(queue.poll());
-         */
-
-        return treeNode;
+        return new TreeNode(queue.poll());
     }
 
 
