@@ -12,15 +12,18 @@ public class GroupAnagrans49 {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        String[] myStrings = { "eat","tea","tan","ate","nat","bat" };
+        //String[] myStrings = { "eat","tea","tan","ate","nat","bat" };
+        String[] myStrings =  {"bdddddddddd","bbbbbbbbbbc"};
         List<List<String>> result = solution.groupAnagrams(myStrings);
         StringBuilder sb = new StringBuilder();
         for (List<String> currentList : result) {
             sb.append(" - ");
+            sb.append("{");
             for (String currentStr : currentList) {
                 sb.append(currentStr);
                 sb.append(" ");
             }
+            sb.append("}");
         }
 
         System.out.println(sb);
@@ -65,6 +68,7 @@ public class GroupAnagrans49 {
 
             StringBuilder sb = new StringBuilder();
             for (int value : array) {
+                sb.append("-");
                 sb.append(value);
             }
 
