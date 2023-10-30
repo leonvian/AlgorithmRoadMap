@@ -26,7 +26,7 @@ import java.util.Stack;
 public class BasicCalculator {
 
     public static void main(String[] args) {
-        System.out.println(calculate("1+1"));
+        System.out.println(calculate("1 + 1"));
         System.out.println(calculate("(1+(4+5+2)-3)+(6+8)"));
 
     }
@@ -47,6 +47,8 @@ public class BasicCalculator {
                 stackNumbers.peek().add(sum);
             } else if (current == '+' || current == '-') {
                 stackOperations.peek().add(current);
+            } else if (current == ' ') {
+                continue;
             } else {
                 stackNumbers.peek().add(Character.getNumericValue(current));
             }
@@ -58,6 +60,7 @@ public class BasicCalculator {
 
     private static int executeQueue(LinkedList<Integer> queue, LinkedList<Character> operations) {
         if (queue.isEmpty()) return 0;
+        if (operations.isEmpty()) return queue.poll();
 
         Integer val1 = null;
         Integer val2 = null;
