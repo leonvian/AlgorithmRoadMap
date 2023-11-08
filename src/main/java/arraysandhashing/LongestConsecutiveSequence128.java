@@ -6,6 +6,8 @@ import java.util.HashSet;
 /**
  * https://leetcode.com/problems/longest-consecutive-sequence/
  *
+ * The hint here is to find the last element of a sequence.
+ *
  */
 public class LongestConsecutiveSequence128 {
 
