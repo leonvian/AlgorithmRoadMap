@@ -7,10 +7,10 @@ public class PathSum {
     }
 
     public static  boolean hasPathSum(TreeNode root, int targetSum) {
-        return dst(root, targetSum, 0);
+        return dsf(root, targetSum, 0);
     }
 
-    private static boolean dst(TreeNode node, int targetSum, int currentSum) {
+    private static boolean dsf(TreeNode node, int targetSum, int currentSum) {
         if (node == null)
             return false;
         System.out.println(currentSum);
@@ -21,7 +21,7 @@ public class PathSum {
             return true;
 
 
-        return dst(node.left, targetSum, currentSum) || dst(node.right, targetSum, currentSum);
+        return dsf(node.left, targetSum, currentSum) || dsf(node.right, targetSum, currentSum);
     }
 
     private static boolean isLeaf(TreeNode node) {
