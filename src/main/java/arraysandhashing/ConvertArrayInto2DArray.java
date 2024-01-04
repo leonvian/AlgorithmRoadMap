@@ -4,15 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.PriorityQueue;
-
 public class ConvertArrayInto2DArray {
-
     public static void main(String[] args) {
-        //
         findMatrix(new int[] {1,3,4,1,2,3,1});
     }
 
-    private static List<List<Integer>> findMatrix_sol2(int[] nums) {
+    private static List<List<Integer>> findatrix_sol2(int[] nums) {
         HashMap<Integer, Integer> data = new HashMap<Integer, Integer>();
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         for (int value : nums) {
