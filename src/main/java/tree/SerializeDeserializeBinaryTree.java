@@ -1,7 +1,6 @@
 package tree;
 
 import java.util.LinkedList;
-import java.util.Stack;
 
 public class SerializeDeserializeBinaryTree {
 
@@ -43,7 +42,7 @@ public class SerializeDeserializeBinaryTree {
 
         if (root1 == null || root2 == null) return false;
 
-        if (root1.value != root2.value) return false;
+        if (root1.val != root2.val) return false;
 
         return isEqual(root1.left, root2.left) && isEqual(root1.right, root2.right);
     }
@@ -57,7 +56,7 @@ public class SerializeDeserializeBinaryTree {
         while (!queue.isEmpty()) {
             TreeNodeHolder current = queue.poll();
             if (current.isValid) {
-                stringBuilder.append(current.treeNode.value);
+                stringBuilder.append(current.treeNode.val);
                 stringBuilder.append(SEPARATOR);
             } else {
                 stringBuilder.append(NULL);

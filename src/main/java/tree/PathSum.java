@@ -15,7 +15,7 @@ public class PathSum {
             return false;
         System.out.println(currentSum);
 
-        currentSum += node.value;
+        currentSum += node.val;
 
         if (currentSum == targetSum && isLeaf(node))
             return true;

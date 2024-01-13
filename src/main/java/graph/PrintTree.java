@@ -2,8 +2,6 @@ package graph;
 
 import tree.TreeNode;
 
-import java.util.List;
-
 /**
  *
  */
@@ -44,7 +42,7 @@ public class PrintTree {
         int nextRow = row + 1;
         int col = (colLimitStart + colLimitEnd) / 2;
 
-        matrix[nextRow][col] = String.valueOf(node.value);
+        matrix[nextRow][col] = String.valueOf(node.val);
 
         addNode(matrix, node.left, nextRow, colLimitStart, col);
 

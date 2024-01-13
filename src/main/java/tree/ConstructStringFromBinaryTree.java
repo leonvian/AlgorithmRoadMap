@@ -20,7 +20,7 @@ public class ConstructStringFromBinaryTree {
     private static void preorder(TreeNode node, StringBuilder sb) {
         if (node == null) return;
 
-        sb.append(node.value);
+        sb.append(node.val);
         if (node.left != null) {
             sb.append("(");
             preorder(node.left, sb);

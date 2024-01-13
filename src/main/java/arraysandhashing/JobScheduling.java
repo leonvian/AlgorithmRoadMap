@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class JobScheduling {
 
     public static void main(String[] args) {
-
         System.out.println( jobScheduling(
                         new int[] { 1,2,3,4,6 },
                         new int[] { 3,5,10,6,9 },
@@ -15,7 +14,6 @@ public class JobScheduling {
     }
 
     public static int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
-
         Job[] jobs = new Job[profit.length];
         for (int i = 0; i < profit.length; i ++) {
             Job job = new Job(startTime[i], endTime[i], profit[i]);
