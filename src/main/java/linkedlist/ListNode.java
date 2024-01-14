@@ -9,4 +9,11 @@ public class ListNode {
         this.value = value;
     }
 
+    public ListNode() {
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(value);
+    }
 }
