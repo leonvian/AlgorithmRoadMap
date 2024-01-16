@@ -1,7 +1,5 @@
 package linkedlist;
 
-import java.util.Stack;
-
 public class MaximumTwimSum {
 
     public static void main(String[] args) {
@@ -43,7 +41,7 @@ public class MaximumTwimSum {
 
         int maxSum = 0;
         while (newHead != null) {
-           maxSum = Math.max(maxSum, newHead.value + oldHead.value);
+           maxSum = Math.max(maxSum, newHead.val + oldHead.val);
            newHead = newHead.next;
            oldHead = oldHead.next;
         }
