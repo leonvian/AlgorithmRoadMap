@@ -11,8 +11,38 @@ public class ShiftingLetters2 {
          new int[][]{
                  {4,8,0},{4,4,0},{2,4,0},{2,4,0},{6,7,1},{2,2,1},{0,2,1},{8,8,0},{1,3,1}
         }));
+    }
 
+    public static String sol2(String s, int[][] shifts) {
+        int[] moves = new int[s.length() + 1]; // Use an extra space for range manipulation
 
+        // Apply the range shifts using prefix sum approach
+        for (int[] shift : shifts) {
+            int start = shift[0];
+            int end = shift[1];
+            int direction = shift[2];
+
+            moves[start] += (direction == 1) ? 1 : -1;
+            moves[end + 1] += (direction == 1) ? -1 : 1;
+        }
+
+        // Compute cumulative shifts
+        int[] cumulativeShifts = new int[s.length()];
+        int shiftSum = 0;
+        for (int i = 0; i < s.length(); i++) {
+            shiftSum += moves[i];
+            cumulativeShifts[i] = shiftSum;
+        }
+
+        // Apply the shifts to the string
+        char[] array = s.toCharArray();
+        for (int i = 0; i < array.length; i++) {
+            int shift = cumulativeShifts[i] % 26;
+            if (shift < 0) shift += 26; // Handle negative shifts
+            array[i] = (char) ((array[i] - 'a' + shift) % 26 + 'a');
+        }
+
+        return new String(array);
     }
 
     public static String shiftingLetters(String s, int[][] shifts) {
